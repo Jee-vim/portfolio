@@ -68,7 +68,12 @@ const CANONICAL = `${DOMAIN}/blog/${slug}`;
     margin-bottom: 3rem;
   }
   .post__header > h1 {
-  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+    font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  }
+
+  .post__header p {
+    font-family: "secondary";
+    font-size: 15px;
   }
   .post__header > :not(h1) {
     color: var(--neutral-400);

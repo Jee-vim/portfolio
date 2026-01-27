@@ -1,62 +1,63 @@
----
-import { IS_WORK } from "../utils/constants.ts"
----
 <header>
   <nav>
     <a class="a-none" href="/">Jaenudin</a>
-    <p class="status">
-      <span class={`status-indicator ${IS_WORK ? "is-on" : "is-off"}`}
-      ></span>
-      {IS_WORK ? "Available for work" : "Currently unavailable"}
-    </p>
+    <button id="theme-toggle" aria-label="Toggle theme">
+      <div class="theme-icon"></div>
+    </button>
   </nav>
 </header>
 
-<style>
-  nav {
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
+<script>
+  function setupThemeToggle() {
+    const btn = document.getElementById("theme-toggle");
+    btn?.addEventListener("click", () => {
+      const isLight = document.documentElement.classList.toggle("light-mode");
+      localStorage.setItem("theme", isLight ? "light" : "dark");
+    });
   }
+
+  setupThemeToggle();
+  document.addEventListener("astro:after-swap", setupThemeToggle);
+</script>
+
+<style>
+  nav { 
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+  }
+  
   a {
     font-weight: 500;
   }
 
-  .status {
+  #theme-toggle {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
   }
 
-  .status-indicator {
+  .theme-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--foreground-muted);
+    border: 2px solid var(--foreground-muted);
+    transition: all 0.3s ease;
     position: relative;
-    width: 8px;
-    height: 8px;
-    background: var(--primary);
-  }
-  .status-indicator.is-off {
-    opacity: 0.35;
   }
 
-  .status-indicator.is-on::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border: 1px solid var(--primary);
-    opacity: 0.6;
-    animation: square-ping 1s infinite ease-out;
+  :root.light-mode .theme-icon {
+    background: transparent;
+    border-color: var(--foreground);
+    transform: scale(1.1);
   }
-  @keyframes square-ping {
-    0% {
-      transform: scale(1);
-      opacity: 0.6;
-    }
-    70% {
-      transform: scale(3.2);
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
+
+  #theme-toggle:hover .theme-icon {
+    border-color: var(--primary);
   }
 </style>

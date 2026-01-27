@@ -1,5 +1,6 @@
 ---
 import { ClientRouter } from "astro:transitions";
+import ThemeScript from "../components/theme-script.astro"
 import "../styles/global.css";
 import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
 ---
@@ -40,6 +41,7 @@ import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
         ]
       }
     </script>
+    <ThemeScript />
   </head>
 
   <body>

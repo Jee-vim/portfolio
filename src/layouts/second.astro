@@ -3,6 +3,7 @@ import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
 import { IMAGE } from "../utils/constants.ts";
 import { Undo2 } from "@lucide/astro"
+import ThemeScript from "../components/theme-script.astro"
 ---
 
 <html lang="en">
@@ -20,6 +21,7 @@ import { Undo2 } from "@lucide/astro"
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={IMAGE} />
     <slot name="head" />
+    <ThemeScript />
   </head>
 
   <body>
