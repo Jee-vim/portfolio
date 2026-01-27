@@ -1,0 +1,32 @@
+---
+import { BLOG } from "../utils/constants.ts"
+const latestBlog = BLOG[0].data
+---
+<a class="a-none" href={`/blog/${BLOG[0].slug}`}>
+  <p>{latestBlog.title}</p>
+  <div>
+  </div>
+  <small>{latestBlog.date.toDateString()}</small>
+</a>
+
+<style>
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  a p,a small {
+    min-width: max-content;
+    padding: 0;
+    margin: 0;
+  }
+  a div {
+    height: 1px;
+    width: 100%;
+    background: var(--background-muted)
+  }
+  a small {
+    color: var(--background-muted)
+  }
+</style>

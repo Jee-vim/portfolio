@@ -1,0 +1,26 @@
+---
+const DATA = ["connect","project","blog"]
+---
+<div>
+  {DATA.map((item, id) => {
+    return <p> <a class="a-none" href={`/${item}`}>{item}</a>  <span>{id!=DATA.length-1&&"/"}</span> </p> 
+  
+  })}
+</div>
+
+<style>
+  div {
+    display: flex;
+    width: fit-content;
+    padding: 0;
+  }
+  div {
+    list-style-type: none;
+  }
+  p a {
+    text-transform: capitalize;
+  }
+  p span {
+    padding-right: 1rem;
+  }
+</style>

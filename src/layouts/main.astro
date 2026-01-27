@@ -1,0 +1,60 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
+---
+
+<html lang="en">
+  <head>
+    <ClientRouter />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{TITLE}</title>
+    <meta name="description" content={DESC} />
+    <meta name="author" content={NAME} />
+    <link rel="canonical" href={DOMAIN} />
+    <meta name="theme-color" content="#1f1f1f" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={TITLE} />
+    <meta property="og:description" content={DESC} />
+    <meta property="og:url" content={DOMAIN} />
+    <meta property="og:image" content={IMAGE} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={TITLE} />
+    <meta name="twitter:description" content={DESC} />
+    <meta name="twitter:image" content={IMAGE} />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jaenudin",
+        "jobTitle": "Software Developer",
+        "url": "https://jaenudin.vercel.ap",
+        "sameAs": [
+          "https://github.com/jee-vim"
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="overlay"></div>
+
+    <main class="container">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem
+  }
+</style>

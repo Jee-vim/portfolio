@@ -1,0 +1,91 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/second.astro";
+import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../../utils/constants.ts";
+
+export async function getStaticPaths() {
+  const now = new Date();
+
+  const posts = (await getCollection("blog")).filter((post) => {
+    if (import.meta.env.DEV) return true;
+
+    if (post.data.status === "PUBLISH") return true;
+
+    if (post.data.status === "SCHEDULE" && post.data.date <= now) {
+      return true;
+    }
+
+    return false;
+  });
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { slug } = Astro.params;
+const item = post.data;
+const { Content } = await post.render();
+const CANONICAL = `${DOMAIN}/blog/${slug}`;
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>{item.title}</title>
+    <meta name="description" content={item.description} />
+    <meta name="keywords" content={item.tags.map((it) => it)} />
+
+    <link rel="canonical" href={CANONICAL} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={item.title} />
+    <meta property="og:description" content={item.description} />
+    <meta property="og:url" content={CANONICAL} />
+
+    <meta name="twitter:title" content={item.title} />
+    <meta name="twitter:description" content={item.description} />
+  </Fragment>
+
+  <article>
+    <header class="post__header">
+      <small>{item.date.toDateString()}</small>
+      <h1>{item.title}</h1>
+      <p>{item.description}</p>
+    </header>
+
+    <div class="post__content">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .post__header {
+    border-bottom: 1px solid var(--neutral-500);
+    padding-bottom: 1rem;
+    margin-bottom: 3rem;
+  }
+  .post__header > h1 {
+  font-size: clamp(1.5rem, 4vw + 1rem, 2.5rem);
+  }
+  .post__header > :not(h1) {
+    color: var(--neutral-400);
+  }
+  :global(.post__content),
+  :global(.post__content p) {
+    font-family: "secondary";
+    font-size: 15px;
+    line-height: 1.8 !important;
+  }
+
+  :global(.post__content h2),
+  :global(.post__content h3),
+  :global(.post__content h4),
+  :global(.post__content h5),
+  :global(.post__content h6) {
+    font-family: "primary";
+    margin-top: 3rem;
+  }
+</style>
