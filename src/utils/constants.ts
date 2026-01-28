@@ -93,6 +93,13 @@ export const PROJECT = [
   },
   {
     tag: "CLI",
+    title: "Syncro",
+    description: "The Human-Centric Discord Scheduler.",
+    website: "https://github.com/Jee-vim/syncro",
+    year: 2026,
+  },
+  {
+    tag: "CLI",
     title: "Clipper Automation",
     description: "End-to-end automation pipeline for turning long videos into short-form content and distributing them across multiple platforms automatically.",
     website: "https://github.com/Jee-vim/clipper-automation-pipeline",
