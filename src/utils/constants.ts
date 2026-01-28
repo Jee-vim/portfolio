@@ -28,6 +28,14 @@ export const CONNECT = [
     value: "https://github.com/jee-vim"
   },
   {
+    label: "in/jaenudin",
+    value: "http://www.linkedin.com/in/jaenudin-jee-650482199",
+  },
+  {
+    label: "t.me/jee",
+    value: "https://t.me/jee_vim",
+  },
+  {
     label: "email",
     value: "mailto:jee.nvim@gmail.com",
   }
@@ -85,16 +93,16 @@ export const PROJECT = [
   },
   {
     tag: "CLI",
-    title: "Short Maker",
-    description: "Convert YouTube URLs into shorts using FFmpeg and FastWhisper with scheduled multi-account uploads.",
-    website: "https://github.com/Jee-vim/short-maker",
+    title: "Clipper Automation",
+    description: "End-to-end automation pipeline for turning long videos into short-form content and distributing them across multiple platforms automatically.",
+    website: "https://github.com/Jee-vim/clipper-automation-pipeline",
     year: 2026,
   },
   {
     tag: "Web",
     title: "Admin Ojekfood",
     description: "Managing order, customer and driver at same platofrm",
-    website: "https://orderia.id",
+    website: null,
     year: 2026,
   },
   {
