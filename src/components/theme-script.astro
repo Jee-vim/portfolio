@@ -1,12 +1,24 @@
 <script is:inline>
+  const THEMES = ["dark", "mid", "light"];
+
   function applyTheme() {
-    const theme = localStorage.getItem('theme') || 
-      (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-    
-    document.documentElement.classList.toggle('light-mode', theme === 'light');
+    let theme =
+      localStorage.getItem("theme") ||
+      (window.matchMedia("(prefers-color-scheme: light)").matches
+        ? "light"
+        : "dark");
+
+    document.documentElement.classList.remove(
+      "dark-mode",
+      "mid-mode",
+      "light-mode"
+    );
+
+    if (theme !== "dark") {
+      document.documentElement.classList.add(`${theme}-mode`);
+    }
   }
 
   applyTheme();
-
-  document.addEventListener('astro:after-swap', applyTheme);
+  document.addEventListener("astro:after-swap", applyTheme);
 </script>

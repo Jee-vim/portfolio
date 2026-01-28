@@ -7,6 +7,15 @@
 
   --primary: #8ce07c;
 }
+:root.mid-mode {
+  --background: #3a3834;
+  --background-muted: #4d4a44;
+
+  --foreground: #f1ede6;
+  --foreground-muted: #c2bdb4;
+
+  --primary: #4CAF50;
+}
 :root.light-mode {
   --background: #f6f6f6;
   --background-muted: #e5e5e5;
