@@ -33,7 +33,9 @@ import ThemeScript from "../components/theme-script.astro"
         index
       </a>
       <div class="sidebar-wrapper">
-        <slot name="sidebar" />
+        <nav class="side__nav">
+          <slot name="sidebar" />
+        </nav>
       </div>
     </aside>
     <main class="container-second">
@@ -97,4 +99,5 @@ import ThemeScript from "../components/theme-script.astro"
     flex-direction: column;
     gap: 2rem;
   }
+
 </style>

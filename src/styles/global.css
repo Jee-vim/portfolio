@@ -134,3 +134,69 @@ a:hover {
   padding-top: clamp(5rem, 1.5vw, 8rem);
   padding-bottom: clamp(2rem, 1.5vw, 5rem);
 }
+
+/* SIDEBAR */
+.side__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.side__dot {
+  position: relative;
+  display: block;
+
+  height: 20px;
+  width: 50px;
+
+  text-decoration: none;
+}
+
+.side__dot::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+
+  height: 2px;
+  transform: translateY(-50%);
+
+  background: var(--foreground-muted);
+  opacity: .4;
+
+  transition: opacity .15s ease;
+}
+
+.side__dot:hover::before {
+  opacity: 1;
+}
+
+.side__dot .label {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+
+  font-size: 13px;
+  padding: .25rem .5rem;
+
+  background: var(--background);
+  border: 1px solid var(--background-muted);
+  border-radius: 6px;
+
+  color: var(--foreground);
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity .15s ease;
+}
+
+.side__dot:hover .label {
+  opacity: 1;
+}
+/* SIDEBAR */
