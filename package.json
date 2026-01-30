@@ -13,5 +13,8 @@
     "astro": "^5.16.15",
     "astro-lenis": "^1.0.5",
     "lenis": "^1.3.17"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

@@ -100,9 +100,9 @@ export const PROJECT = [
   },
   {
     tag: "CLI",
-    title: "Clipper Automation",
-    description: "End-to-end automation pipeline for turning long videos into short-form content and distributing them across multiple platforms automatically.",
-    website: "https://github.com/Jee-vim/clipper-automation-pipeline",
+    title: "Clip Pipe",
+    description: "Automated pipeline for clipping long videos into shorts and publishing them across platforms.",
+    website: "https://github.com/Jee-vim/clip-pipe",
     year: 2026,
   },
   {
