@@ -45,7 +45,7 @@ import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
   </head>
 
   <body>
-    <div class="overlay"></div>
+    <!-- <div class="overlay"></div> -->
 
     <main class="container">
       <slot />
@@ -54,6 +54,12 @@ import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
 </html>
 
 <style>
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+  }
   main {
     display: flex;
     flex-direction: column;

@@ -76,10 +76,12 @@ import ThemeScript from "../components/theme-script.astro"
 
   @media (max-width: 1250px) {
     aside {
+      max-width: 600px;
+      margin-inline: auto;
       padding-inline: clamp(1.5rem, 1.5vw, 3rem);
+      width: 100%;
       position: static;
       height: fit-content;
-      width: 100%;
     }
     .sidebar-wrapper {
       display: none;
