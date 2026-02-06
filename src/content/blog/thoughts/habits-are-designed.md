@@ -75,9 +75,7 @@ Products placed at eye level sell more than those near the floor. This is not ab
 
 The same logic applies to habits.
 
-During the 1970s energy crisis, Dutch researchers found that households used less electricity when power meters were placed near the front door instead of hidden away. Visibility changed behavior.
-
-## Design Your Environment
+### Design Your Environment
 
 Every habit starts with a cue. If you want better habits, redesign your environment so the right cues are obvious and easy to act on.
 
