@@ -1,6 +1,7 @@
 ---
 import { ClientRouter } from "astro:transitions";
 import ThemeScript from "../components/theme-script.astro"
+import Cursor from "../components/cursor.astro"
 import "../styles/global.css";
 import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
 ---
@@ -47,6 +48,7 @@ import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
   <body>
     <div class="overlay"></div>
 
+    <Cursor />
     <main class="container">
       <slot />
     </main>

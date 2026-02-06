@@ -25,6 +25,16 @@
   padding: 0;
   margin: 0;
 }
+
+@media (min-width: 1024px) {
+  html, body {
+    cursor: none !important;
+  }
+
+  a, button {
+    cursor: none !important;
+  }
+}
 html {
   scroll-behavior: smooth;
 }

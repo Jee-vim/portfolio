@@ -1,0 +1,74 @@
+<div id="custom-cursor" class="cursor hidden"></div>
+
+<style>
+  .cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--foreground);
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+    will-change: transform;
+    transition: scale 0.3s ease-out;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  const initCursor = () => {
+    const cursor = document.getElementById("custom-cursor");
+    const isDesktop = window.matchMedia("(min-width: 1024px)").matches;
+
+    if (!isDesktop || !cursor) return;
+
+    cursor.classList.remove("hidden");
+
+    let mouse = { x: 0, y: 0 };
+    let cursorP = { x: 0, y: 0 };
+
+    const updateMouse = (e: MouseEvent) => {
+      mouse.x = e.clientX;
+      mouse.y = e.clientY;
+    };
+
+    const tick = () => {
+      cursorP.x += (mouse.x - cursorP.x) * 0.15;
+      cursorP.y += (mouse.y - cursorP.y) * 0.15;
+
+      cursor.style.transform = `translate3d(${cursorP.x - 8}px, ${cursorP.y - 8}px, 0)`;
+
+      requestAnimationFrame(tick);
+    };
+
+    const handleHover = () => {
+      cursor.style.scale = "0.5";
+    };
+
+    const handleUnhover = () => {
+      cursor.style.scale = "1";
+    };
+
+    window.addEventListener("mousemove", updateMouse);
+    
+    document.addEventListener("mouseover", (e) => {
+      if ((e.target as HTMLElement)?.closest(".link")) handleHover();
+    });
+
+    document.addEventListener("mouseout", (e) => {
+      if ((e.target as HTMLElement)?.closest(".link")) handleUnhover();
+    });
+
+    requestAnimationFrame(tick);
+  };
+
+  initCursor();
+  document.addEventListener("astro:after-swap", initCursor);
+</script>
