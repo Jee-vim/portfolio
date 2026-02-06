@@ -17,10 +17,10 @@ Reading *Atomic Habits* forced me to reconsider that belief. The book made one t
 
 Every habit follows the same four-step loop, whether it is good or bad:
 
-1. **Cue** – what triggers the behavior
-2. **Craving** – the desire for a change in feeling
-3. **Response** – the action itself
-4. **Reward** – what reinforces the behavior
+1. **Cue** - what triggers the behavior
+2. **Craving** - the desire for a change in feeling
+3. **Response** - the action itself
+4. **Reward** - what reinforces the behavior
 
 Habits are not random. They are predictable reactions to repeated conditions. Change the conditions, and behavior changes with them.
 
@@ -104,7 +104,7 @@ This is why habits are designed, not desired. Motivation might start a habit onc
 * James Clear. *Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones*
   [https://jamesclear.com/atomic-habits](https://jamesclear.com/atomic-habits)
 
-* James Clear. *Atomic Habits – Summary*
+* James Clear. *Atomic Habits - Summary*
   [https://jamesclear.com/atomic-habits-summary](https://jamesclear.com/atomic-habits-summary)
 
 * Atomic Reads. *Summary of Atomic Habits by James Clear*

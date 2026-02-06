@@ -3,7 +3,7 @@ const DATA = ["connect","project","blog"]
 ---
 <div>
   {DATA.map((item, id) => {
-    return <p> <a class="a-none" href={`/${item}`}>{item}</a>  <span>{id!=DATA.length-1&&"/"}</span> </p> 
+  return <p> <a class="a-none" href={`/${item}`} title={item}>{item}</a>  <span>{id!=DATA.length-1&&"/"}</span> </p> 
   
   })}
 </div>

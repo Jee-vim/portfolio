@@ -2,11 +2,11 @@
 import { BLOG } from "../utils/constants.ts"
 const latestBlog = BLOG[0].data
 ---
-<a class="a-none" href={`/blog/${BLOG[0].slug}`}>
+<a class="a-none" href={`/blog/${BLOG[0].slug}`} title={BLOG[0].data.title}>
   <p>{latestBlog.title}</p>
   <div>
   </div>
-  <small>{latestBlog.date.toDateString()}</small>
+  <small>{latestBlog.date.toDateString().slice(4,10)}</small>
 </a>
 
 <style>
@@ -16,17 +16,22 @@ const latestBlog = BLOG[0].data
     justify-content: space-between;
     gap: 1rem;
   }
-  a p,a small {
-    min-width: max-content;
-    padding: 0;
-    margin: 0;
-  }
-  a div {
-    height: 1px;
-    width: 100%;
-    background: var(--foreground-muted)
+  a p {
+    width:100%;
+    max-width: 300px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   a small {
+    min-width: max-content;
     color: var(--foreground-muted)
+  }
+  @media (min-width: 768px) {
+    a div {
+      height: 1px;
+      width: 100%;
+      background: var(--foreground-muted)
+    }
   }
 </style>

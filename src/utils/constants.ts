@@ -32,10 +32,6 @@ export const CONNECT = [
     value: "http://www.linkedin.com/in/jaenudin-jee-650482199",
   },
   {
-    label: "t.me/jee_vim",
-    value: "https://t.me/jee_vim",
-  },
-  {
     label: "email",
     value: "mailto:jee.nvim@gmail.com",
   }

@@ -5,7 +5,7 @@ date: 2026-01-14
 status: PUBLISH
 tags:
   - nextjs
-  - web-development
+  - web development
   - troubleshooting
 ---
 

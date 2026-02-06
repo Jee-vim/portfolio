@@ -4,7 +4,7 @@ description: How to build reusable form components with TanStack Form so you don
 date: 2026-01-16
 status: PUBLISH
 tags:
-  - react
+  - reactjs
   - web development
   - tanstack
 ---
