@@ -1,0 +1,70 @@
+---
+import Layout from "../layouts/second.astro";
+import { DOMAIN } from "../utils/constants.ts"
+import * as UsesData from "../utils/uses.md";
+
+const TITLE = "Uses | Jaenudin"
+const DESC = "A List of things that I use on a regular basis."
+const URL = `${DOMAIN}/uses`
+
+const { Content } = UsesData;
+const headings = UsesData.getHeadings();
+const h2Headers = headings.filter((h) => h.depth === 2);
+---
+
+<Layout>
+  <Fragment slot="head">
+    <title>{TITLE}</title>
+    <meta name="description" content={DESC} />
+    <link rel="canonical" href={URL} />
+    <meta property="og:url" content={URL} />
+    <meta property="og:title" content={TITLE} />
+    <meta property="og:description" content={DESC} />
+    <meta name="twitter:title" content={TITLE} />
+    <meta name="twitter:description" content={DESC} />
+  </Fragment>
+
+  <Fragment slot="sidebar">
+    {h2Headers.map((header) => (
+      <a
+        href={`#${header.slug}`}
+        class="side__dot"
+        aria-label={header.text}
+      >
+        <span class="label">
+          {header.text}
+        </span>
+      </a>
+    ))}
+  </Fragment>
+
+  <header>
+    <h1>Uses</h1>
+    <p>{DESC} <span>inspired by <a href="https://uses.tech" title="Uses" class="a-none">uses.tech</a> </span></p>
+  </header>
+
+  <div class="post__content">
+    <Content />
+  </div>
+</Layout>
+
+<style>
+  header h1 {
+    font-size: 1.5rem;
+  }
+  header p,
+  :global(.post__content h2) {
+    scroll-margin-top: 4.5rem;
+  }
+  :global(.post__content),
+  :global(.post__content p) {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  :global(.post__content h2) {
+    font-family: "primary";
+    font-size: 1.2rem;
+    margin-top: 2rem;
+  }
+</style>
