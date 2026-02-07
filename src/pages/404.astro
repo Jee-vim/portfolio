@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/main.astro";
+import Header from "../components/header.astro";
+---
+
+<Layout>
+  <Header />
+  <div>
+    <h1>The requested path does not exist in the current scope.</h1>
+
+    <a href="/" class="a-none">
+      cd ..
+    </a>
+  </div>
+</Layout>
+
+<style>
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    min-height: 63vh;
+  }
+
+  h1 {
+    font-weight: 400;
+    font-size: 1rem !important;
+    color: var(--foreground-muted);
+  }
+</style>
