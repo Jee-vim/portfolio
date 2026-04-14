@@ -23,6 +23,7 @@ export async function getStaticPaths() {
 
 const { post } = Astro.props;
 const { slug } = Astro.params;
+const ogImageUrl = new URL(`/og/${slug}.png`, Astro.site);
 const item = post.data;
 const { Content, headings } = await post.render();
 const CANONICAL = `${DOMAIN}/blog/${slug}`;
@@ -42,9 +43,12 @@ const h2Headers = headings.filter((h) => h.depth === 2);
     <meta property="og:title" content={item.title} />
     <meta property="og:description" content={item.description} />
     <meta property="og:url" content={CANONICAL} />
+    <meta property="og:image" content={ogImageUrl} />
 
     <meta name="twitter:title" content={item.title} />
     <meta name="twitter:description" content={item.description} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={ogImageUrl} />
   </Fragment>
 
   <Fragment slot="sidebar">
