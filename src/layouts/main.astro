@@ -3,11 +3,12 @@ import { ClientRouter } from "astro:transitions";
 import ThemeScript from "../components/theme-script.astro"
 import Cursor from "../components/cursor.astro"
 import "../styles/global.css";
-import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
+import { DOMAIN, NAME, TITLE, DESC } from "../utils/constants.ts";
 ---
 
 <html lang="en">
   <head>
+    <slot name="head" />
     <ClientRouter />
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -23,12 +24,12 @@ import { DOMAIN, IMAGE, NAME, TITLE, DESC } from "../utils/constants.ts";
     <meta property="og:title" content={TITLE} />
     <meta property="og:description" content={DESC} />
     <meta property="og:url" content={DOMAIN} />
-    <meta property="og:image" content={IMAGE} />
+    <meta property="og:image" content={`${DOMAIN}/og/home.png`} />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={TITLE} />
     <meta name="twitter:description" content={DESC} />
-    <meta name="twitter:image" content={IMAGE} />
+    <meta name="twitter:image" content={`${DOMAIN}/og/home.png`} />
 
     <script type="application/ld+json">
       {

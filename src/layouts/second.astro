@@ -1,7 +1,6 @@
 ---
 import "../styles/global.css";
 import { ClientRouter } from "astro:transitions";
-import { IMAGE } from "../utils/constants.ts";
 import { Undo2 } from "@lucide/astro"
 import ThemeScript from "../components/theme-script.astro"
 import Cursor from "../components/cursor.astro"
@@ -17,10 +16,10 @@ import Cursor from "../components/cursor.astro"
     <meta name="theme-color" content="#1f1f1f" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:image" content={IMAGE} />
+    <slot name="og-image" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={IMAGE} />
+    <slot name="og-image" />
     <slot name="head" />
     <ThemeScript />
   </head>
