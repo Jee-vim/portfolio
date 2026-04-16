@@ -17,11 +17,11 @@
   --primary: #4CAF50;
 }
 :root.light-mode {
-  --background: #f6f6f6;
-  --background-muted: #e5e5e5;
+  --background: #78740e;
+  --background-muted: #98971a;
 
-  --foreground: #1a1a1a;
-  --foreground-muted: #666666;
+  --foreground: #fbf1c7;
+  --foreground-muted: #ebdbb2;
 
-  --primary: #4CAF50;
+  --primary: #d65d0e;
 }
