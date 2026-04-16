@@ -26,6 +26,11 @@
   margin: 0;
 }
 
+::selection {
+  background-color: var(--primary);
+  color: var(--foreground);
+}
+
 @media (min-width: 1024px) {
   html, body {
     cursor: none !important;
