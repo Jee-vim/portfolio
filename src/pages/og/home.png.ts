@@ -4,7 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { TITLE, DESC, NAME } from "../../utils/constants.ts";
 
-const fontPath = path.resolve("public/fonts/Merriweather.ttf");
+const fontPath = path.resolve("public/fonts/AzeretMono.ttf");
 const fontData = fs.readFileSync(fontPath);
 
 export const prerender = true;
@@ -29,6 +29,13 @@ export async function GET() {
             type: "h1",
             props: {
               style: { fontSize: 72, color: "#f6f6f6", lineHeight: 1.1 },
+              children: NAME,
+            },
+          },
+          {
+            type: "p",
+            props: {
+              style: { fontSize: 32, color: "#f6f6f6", marginTop: 40 },
               children: TITLE,
             },
           },

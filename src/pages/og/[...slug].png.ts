@@ -4,7 +4,7 @@ import { getCollection } from "astro:content";
 import fs from "node:fs";
 import path from "node:path";
 
-const fontPath = path.resolve("public/fonts/Merriweather.ttf");
+const fontPath = path.resolve("public/fonts/AzeretMono.ttf");
 const fontData = fs.readFileSync(fontPath);
 
 export async function GET({ props }: { props: { title: string; description: string } }) {
