@@ -2,9 +2,8 @@ import { getCollection } from "astro:content";
 
 export const IS_WORK = true;
 export const DOMAIN = "https://jaenudin.vercel.app";
-export const IMAGE = "https://jaenudin.vercel.app";
 export const NAME = "Jaenudin";
-export const TITLE = "Jaenudin | Software Developer";
+export const TITLE = "Jaenudin | Polymath Dev";
 export const DESC =
   "focused on fast, performance-conscious code and thoughtful interaction design.";
 
