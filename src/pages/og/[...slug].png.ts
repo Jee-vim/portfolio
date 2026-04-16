@@ -1,14 +1,18 @@
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
 import { getCollection } from "astro:content";
+import fontUrl from "../../../public/fonts/Merriweather.ttf?url";
 import fs from "node:fs";
 import path from "node:path";
 
-const fontPath = path.resolve("public/fonts/AzeretMono.ttf");
-const fontData = fs.readFileSync(fontPath);
+async function loadFont(url: string) {
+  const fontPath = path.resolve("./dist", url.replace(/^\/_astro\//, "_astro/"));
+  return fs.readFileSync(fontPath);
+}
 
 export async function GET({ props }: { props: { title: string; description: string } }) {
   const { title, description } = props;
+  const fontData = await loadFont(fontUrl);
 
   const svg = await satori(
     {

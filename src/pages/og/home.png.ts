@@ -1,15 +1,21 @@
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
+import { TITLE, DESC, NAME } from "../../utils/constants.ts";
+import fontUrl from "../../../public/fonts/Merriweather.ttf?url";
 import fs from "node:fs";
 import path from "node:path";
-import { TITLE, DESC, NAME } from "../../utils/constants.ts";
 
-const fontPath = path.resolve("public/fonts/AzeretMono.ttf");
-const fontData = fs.readFileSync(fontPath);
+async function loadFont(url: string) {
+  // During build, the font is in the assets folder
+  const fontPath = path.resolve("./dist", url.replace(/^\/_astro\//, "_astro/"));
+  return fs.readFileSync(fontPath);
+}
 
 export const prerender = true;
 
 export async function GET() {
+  const fontData = await loadFont(fontUrl);
+
   const svg = await satori(
     {
       type: "div",
