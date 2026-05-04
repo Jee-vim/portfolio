@@ -2,8 +2,8 @@ import { getCollection } from "astro:content";
 
 export const IS_WORK = true;
 export const DOMAIN = "https://jaenudin.vercel.app";
-export const NAME = "Jaenudin";
-export const TITLE = "Jaenudin | Polymath Dev";
+export const NAME = "J.";
+export const TITLE = "J. | Polymath Dev";
 export const DESC =
   "focused on fast, performance-conscious code and thoughtful interaction design.";
 
@@ -25,10 +25,6 @@ export const CONNECT = [
   {
     label: "github/jee-vim",
     value: "https://github.com/jee-vim"
-  },
-  {
-    label: "in/jaenudin",
-    value: "http://www.linkedin.com/in/jaenudin-jee-650482199",
   },
   {
     label: "email",
@@ -94,13 +90,6 @@ export const PROJECT = [
     year: 2026,
   },
   {
-    tag: "CLI",
-    title: "Clip Pipe",
-    description: "Automated pipeline for clipping long videos into shorts and publishing them across platforms.",
-    website: "https://github.com/Jee-vim/clip-pipe",
-    year: 2026,
-  },
-  {
     tag: "Web",
     title: "Admin Ojekfood",
     description: "Managing order, customer and driver at same platofrm",
@@ -109,9 +98,16 @@ export const PROJECT = [
   },
   {
     tag: "CLI",
-    title: "Cryptic",
-    description: "Simple AES-256-GCM File Encrypt/Decrypt with password",
-    website: "https://github.com/Jee-vim/cryptic",
+    title: "Clipper",
+    description: "Automated clipping long videos into shorts with subtitle and custom watermark",
+    website: "https://github.com/Jee-vim/clipper",
+    year: 2026,
+  },
+  {
+    tag: "Web",
+    title: "Redesign Oxinos",
+    description: "Company Profile of Oxinos",
+    website: "https://oxinos.id/",
     year: 2026,
   },
 ];
