@@ -83,6 +83,13 @@ export const PROJECT = [
     year: 2026,
   },
   {
+    tag: "Web",
+    title: "ImagenPictures",
+    description: "Company Profile of ImagenPictures",
+    website: "https://imagen-pictures.com/",
+    year: 2026,
+  },
+  {
     tag: "CLI",
     title: "Clipper",
     description: "Automated clipping long videos into shorts with subtitle and custom watermark",
@@ -101,13 +108,6 @@ export const PROJECT = [
     title: "Syncro",
     description: "The Human-Centric Discord Scheduler.",
     website: "https://github.com/Jee-vim/syncro/",
-    year: 2026,
-  },
-  {
-    tag: "Web",
-    title: "Admin Ojekfood",
-    description: "Managing order, customer and driver at same platofrm",
-    website: null,
     year: 2026,
   },
 ];
