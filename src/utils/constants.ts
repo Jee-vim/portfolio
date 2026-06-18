@@ -35,9 +35,9 @@ export const CONNECT = [
 export const PROJECT = [
   {
     tag: "Neovim",
-    title: "Znvim",
-    description: "Neovim configuration optimized for performance",
-    website: "https://github.com/Jee-vim/Znvim/",
+    title: "Nvim",
+    description: "Neovim configuration focus on fast and minimalist",
+    website: "https://github.com/Jee-vim/nvim/",
     year: 2023,
   },
   {
@@ -45,6 +45,13 @@ export const PROJECT = [
     title: "Orderia",
     description: "Ordering reservation platform.",
     website: "https://orderia.id/",
+    year: 2024,
+  },
+  {
+    tag: "Web",
+    title: "POS MMTOYS",
+    description: "Internal POS for MMTOYS shop",
+    website: null,
     year: 2024,
   },
   {
@@ -106,7 +113,7 @@ export const PROJECT = [
   {
     tag: "CLI",
     title: "Syncro",
-    description: "The Human-Centric Discord Scheduler.",
+    description: "Discord Scheduler.",
     website: "https://github.com/Jee-vim/syncro/",
     year: 2026,
   },

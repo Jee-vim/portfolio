@@ -96,6 +96,15 @@ a {
 a:hover {
   color: var(--primary);
 }
+pre {
+  padding:20px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+blockquote {
+  border-left: 2px solid;
+  padding-left: 5px;
+}
 
 ::-webkit-scrollbar {
   width: 8px;
