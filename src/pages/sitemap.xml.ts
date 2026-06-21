@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { getCollection } from "astro:content";
-import { DOMAIN } from "../utils/constants.ts";
+import { DOMAIN } from "../lib/constants.ts";
 
 export const GET: APIRoute = async () => {
   const now = new Date();

@@ -1,6 +1,6 @@
 import satori from "satori";
 import { Resvg } from "@resvg/resvg-js";
-import { TITLE, DESC, NAME } from "../../utils/constants.ts";
+import { TITLE, DESC, NAME } from "../../lib/constants.ts";
 import fontUrl from "../../../public/fonts/Merriweather.ttf?url";
 import fs from "node:fs";
 import path from "node:path";
