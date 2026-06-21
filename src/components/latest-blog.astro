@@ -1,6 +1,7 @@
 ---
 import { BLOG } from "../lib/constants.ts"
-const latestBlog = BLOG[0].data
+const latestPost = BLOG[0];
+const latestBlog = latestPost ? latestPost.data : null;
 ---
 <a class="a-none" href={`/blog/${BLOG[0].slug}`} title={BLOG[0].data.title}>
   <p>{latestBlog.title}</p>

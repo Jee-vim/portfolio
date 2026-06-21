@@ -7,14 +7,14 @@ export const TITLE = "J. | Polymath Dev";
 export const DESC =
   "focused on fast, performance-conscious code and thoughtful interaction design.";
 
-const now = new Date();
+const now = new Date(); // Ensure this is defined!
 
 export const BLOG = (await getCollection("blog"))
   .filter((post) => {
     if (post.data.status === "PUBLISH") return true;
 
-    if (post.data.status === "SCHEDULE" && post.data.date <= now) {
-      return true;
+    if (post.data.status === "SCHEDULE" && post.data.date) {
+      return post.data.date.getTime() <= now.getTime();
     }
 
     return false;

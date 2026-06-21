@@ -4,8 +4,8 @@ description: Why reproducible systems and reliable rollbacks changed how I think
 date: 2026-06-15
 status: PUBLISH
 tags:
-  - Linux
-  - NixOS
+  - linux
+  - nixos
 ---
 
 ## Why Reproducibility Matters

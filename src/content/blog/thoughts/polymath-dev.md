@@ -3,7 +3,8 @@ title: Polymath Dev
 description: Embracing the multi-disciplinary approach to software development
 date: 2026-04-13
 status: PUBLISH
-tags: ["polymath-dev"]
+tags: 
+    - polymath-dev
 ---
 
 The term "polymath" comes from the Greek *poly-* (many) and *-mathikos* (learning, skilled). It describes someone whose expertise spans multiple domains. Leonardo da Vinci is the canonical example - painter, engineer, anatomist, inventor.
