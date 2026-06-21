@@ -227,3 +227,7 @@ blockquote {
   opacity: 1;
 }
 /* SIDEBAR */
+
+.bold {
+  background-color: var(--primary);
+}

@@ -3,12 +3,14 @@ import { BLOG } from "../lib/constants.ts"
 const latestPost = BLOG[0];
 const latestBlog = latestPost ? latestPost.data : null;
 ---
-<a class="a-none" href={`/blog/${BLOG[0].slug}`} title={BLOG[0].data.title}>
-  <p>{latestBlog.title}</p>
-  <div>
-  </div>
-  <small>{latestBlog.date.toDateString().slice(4,10)}</small>
-</a>
+
+{latestPost && latestBlog && (
+  <a class="a-none" href={`/blog/${latestPost.slug}`} title={latestBlog.title}>
+    <p>{latestBlog.title}</p>
+    <div></div>
+    <small>{latestBlog.date.toDateString().slice(4,10)}</small>
+  </a>
+)}
 
 <style>
   a {
@@ -16,23 +18,34 @@ const latestBlog = latestPost ? latestPost.data : null;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+    width: 100%;
   }
+  
   a p {
-    width:100%;
-    max-width: 300px;
+    width: 70vw; 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    margin: 0;
   }
+  
   a small {
     min-width: max-content;
-    color: var(--foreground-muted)
+    color: var(--foreground-muted);
   }
+
+  a div {
+    flex-grow: 1;
+    height: 1px;
+    background: var(--foreground-muted);
+    opacity: 0.5; 
+  }
+
   @media (min-width: 768px) {
-    a div {
-      height: 1px;
-      width: 100%;
-      background: var(--foreground-muted)
+    a p {
+      width: auto;
+      max-width: 50%; 
     }
+    
   }
 </style>

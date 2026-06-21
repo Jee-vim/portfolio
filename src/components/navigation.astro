@@ -1,12 +1,34 @@
 ---
-const DATA = ["connect","project","blog","uses"]
+const DATA = ["connect", "project", "blog", "uses"];
 ---
 <div>
   {DATA.map((item, id) => {
-  return <p> <a class="a-none" href={`/${item}`} title={item}>{item}</a>  <span>{id!=DATA.length-1&&"/"}</span> </p> 
-  
+    return (
+      <p> 
+        <a class="binary-link a-none" data-text={item} href={`/${item}`} title={item}>
+          {item}
+        </a> 
+        <span>{id !== DATA.length - 1 && "/"}</span> 
+      </p> 
+    );
   })}
 </div>
+
+<script>
+  import { binaryReveal } from "../lib/utils"; 
+  const links = document.querySelectorAll(".binary-link");
+  
+  links.forEach((link, index) => {
+    const htmlLink = link as HTMLElement;
+    const targetText = htmlLink.getAttribute("data-text") || htmlLink.innerText;
+
+    const staggerDelay = index; 
+
+    setTimeout(() => {
+      binaryReveal(htmlLink, targetText, 2000);
+    }, staggerDelay);
+  });
+</script>
 
 <style>
   div {
