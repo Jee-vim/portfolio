@@ -57,7 +57,7 @@ const URL = `${DOMAIN}/project`
               <div class="content">
                 <h3>{project.title}</h3>
                 {project.website && (
-                  <a href={project.website}>
+                  <a href={project.website} target="_blank">
                     <Link size={13} />
                     {project.website.replace("https://", "")}
                   </a>
