@@ -79,7 +79,7 @@ export const PROJECT = [
     tag: "Web",
     title: "AMPM Creativelab",
     description: "Company profile of AMPM.creativelab",
-    website: "https://ampmcretivelab.io/",
+    website: "https://ampmcreativelab.io/",
     year: 2026,
   },
   {
