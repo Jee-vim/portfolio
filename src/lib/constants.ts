@@ -56,13 +56,6 @@ export const PROJECT = [
   },
   {
     tag: "Web",
-    title: "AMPM.creativelab",
-    description: "Company profile of AMPM.creativelab",
-    website: "https://ampm.cretivelab.io/",
-    year: 2024,
-  },
-  {
-    tag: "Web",
     title: "Play Bobobox",
     description: "Microservice for ordering additional activity at Bobobox",
     website: "https://play.bobobox.com/",
@@ -99,7 +92,7 @@ export const PROJECT = [
   {
     tag: "CLI",
     title: "Clipper",
-    description: "Automated clipping long videos into shorts with subtitle and custom watermark",
+    description: "Video processing CLI tool for creating vertical (9:16) clips from youtube url or local video",
     website: "https://github.com/Jee-vim/clipper/",
     year: 2026,
   },
@@ -115,6 +108,13 @@ export const PROJECT = [
     title: "Syncro",
     description: "Discord Scheduler.",
     website: "https://github.com/Jee-vim/syncro/",
+    year: 2026,
+  },
+  {
+    tag: "Web",
+    title: "AMPM Creativelab",
+    description: "Company profile of AMPM.creativelab",
+    website: "https://ampmcretivelab.io/",
     year: 2026,
   },
 ];
