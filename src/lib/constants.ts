@@ -77,6 +77,13 @@ export const PROJECT = [
   },
   {
     tag: "Web",
+    title: "AMPM Creativelab",
+    description: "Company profile of AMPM.creativelab",
+    website: "https://ampmcretivelab.io/",
+    year: 2026,
+  },
+  {
+    tag: "Web",
     title: "Redesign Oxinos",
     description: "Company Profile of Oxinos",
     website: "https://oxinos.id/",
@@ -108,13 +115,6 @@ export const PROJECT = [
     title: "Syncro",
     description: "Discord Scheduler.",
     website: "https://github.com/Jee-vim/syncro/",
-    year: 2026,
-  },
-  {
-    tag: "Web",
-    title: "AMPM Creativelab",
-    description: "Company profile of AMPM.creativelab",
-    website: "https://ampmcretivelab.io/",
     year: 2026,
   },
 ];
