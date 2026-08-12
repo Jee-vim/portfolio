@@ -83,6 +83,13 @@ export const PROJECT = [
     year: 2026,
   },
   {
+    tag: "Chrome Extension",
+    title: "Focus Shield",
+    description: "Hide distract element on the web",
+    website: "https://github.com/Jee-vim/focus-extension/",
+    year: 2026,
+  },
+  {
     tag: "Web",
     title: "Redesign Oxinos",
     description: "Company Profile of Oxinos",
